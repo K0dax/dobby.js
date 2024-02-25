@@ -1,4 +1,5 @@
 const { Client, IntentsBitField } = require("discord.js");
+require('dotenv').config()
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
@@ -258,5 +259,5 @@ client.on("messageCreate", (message) => {
 });
 
 client.login(
-  "ODA1NzM3MjU2MjMyODEyNTQ2.G1Jn7G.R7Z56b1tz11VUllgfjlrP39Vr5bIkAyXLFnV14"
+  process.env.TOKEN_URL
 );
